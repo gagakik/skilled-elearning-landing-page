@@ -10,6 +10,15 @@
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-style: normal;
+    font-size: 10px;
+
+}
+
+
+.main_container {
+    background: linear-gradient(180deg, #773232 0%, #F0F1FF 100%);
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .container {
@@ -19,9 +28,10 @@ body {
     max-width: 1440px;
     overflow: hidden;
     background-image: url(./assets/image-hero-desktop.webp);
-    background-repeat: no-repeat;
+    background-repeat: no-repeat no-repeat;
     background-position: right -300px top -120px;
 }
+
 
 .container_inner {
     max-width: 1110px;
@@ -46,14 +56,27 @@ body {
     border-radius: 28px;
 }
 
+.btn_dark:hover {
+    background: #666CA3;
+}
+
 .btn_pink {
     background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
     border-radius: 31.5px;
+}
+.btn_pink:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
 }
 
 .btn_purpure {
     background: linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
     border-radius: 28px;
+}
+
+.btn_purpure:hover{
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5),
+     rgba(255, 255, 255, 0.5)), 
+     linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
 }
 
 .top {
@@ -83,7 +106,7 @@ body {
 
 .get_start h1 {
     font-weight: 800;
-    font-size: 56px;
+    font-size: 2rem;
     line-height: 71px;
     color: #13183F;
     margin-top: 186px;
@@ -111,20 +134,14 @@ body {
     top: -180px;
 }
 
-.container_2{
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    max-width: 1440px;
-    background: linear-gradient(180deg, #FFFFFF 0%, #F0F1FF 100%);
-}
+
 
 .wrapper {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 30px;
+    column-gap: 30px;
+    row-gap: 80px;
     margin-top: 250px;
-   
     padding-bottom: 140px;
 }
 
@@ -134,6 +151,7 @@ body {
     background: linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
     border-radius: 15px;
     height: 322px;
+    max-width: 322px;
 }
 
 .block_1 h2 {
@@ -141,12 +159,50 @@ body {
     font-size: 32px;
     line-height: 40px;
     color: #FFFFFF;
+    position: relative;
+    margin: 64px 0px 0px 32px;
 }
 
 .block_2 {
     background-color: #fff;
     border-radius: 15px;
     height: 322px;
+    max-width: 322px;
+    padding: 32px;
+}
+
+.block_2 img {
+    position: absolute;
+    margin-top: -60px;
+}
+
+.block_2 h3 {
+    font-weight: 800;
+font-size: 24px;
+line-height: 30px;
+color: #13183F;
+margin-top: 64px;
+}
+
+.block_2 p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: #83869A;
+    margin-top: 24px;
+}
+
+.block_2 a {
+    font-weight: 700;
+font-size: 18px;
+line-height: 28px;
+color: #F74780;
+text-decoration: none;
+}
+
+.block_2 a:hover {
+    color: #FFA7C3;
+    margin-top: 52px;
 }
 
 
@@ -163,3 +219,18 @@ body {
     margin: 0 auto;
     padding: 32px 0px;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        overflow: hidden;
+        background-image: url(./assets/image-hero-desktop.webp);
+        background-repeat: no-repeat no-repeat;
+        background-position: right -400px top -80px;
+    }
+
+    .get_start {
+        max-width: 50%;
+    }
+  }
